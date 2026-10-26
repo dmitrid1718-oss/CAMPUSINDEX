@@ -1,0 +1,13 @@
+{
+  "academic_year":"2025–26",
+  "published":"2025-11-06",
+  "publisher":"College Board, Trends in College Pricing and Student Aid 2025",
+  "source_url":"https://research.collegeboard.org/trends/college-pricing/highlights",
+  "notes":"National published student-budget averages, not individual college quotes. Housing and food are combined, not separable dorm and meal-plan averages. Estimated grants are user inputs, not observed grant awards. Public two-year living assumptions differ by institution and student; treat as an illustrative national allowance.",
+  "sectors":[
+    {"id":"public2","name":"Public two-year · in-district","tuition":4150,"housing_food":10850,"other":6320,"total":21320,"duration":2},
+    {"id":"public4","name":"Public four-year · in-state","tuition":11950,"housing_food":13900,"other":5140,"total":30990,"duration":4},
+    {"id":"outstate","name":"Public four-year · out-of-state","tuition":31880,"housing_food":13900,"other":5140,"total":50920,"duration":4},
+    {"id":"private4","name":"Private nonprofit · four-year","tuition":45000,"housing_food":15920,"other":4550,"total":65470,"duration":4}
+  ]
+}
