@@ -41,12 +41,12 @@ values={name:get(sid) for name,(sid,_) in SERIES.items()}
 months=sorted(set.intersection(*(set(v.keys()) for v in values.values())))
 months=[m for m in months if m>='2000-01']
 if not months or len(months)<12:raise ValueError('No matched observations')
-base='2020-01'
-if base not in months:raise ValueError('Missing 2020 baseline')
+base='2006-03'
+if base not in months:raise ValueError('Missing earliest common wage baseline 2006-03')
 series={}
 for name,(sid,label) in SERIES.items():
   series[name]={'id':sid,'label':label,'source':'https://fred.stlouisfed.org/series/'+sid,
-                'index_2020_01':[round(100*values[name][m]/values[name][base],3) for m in months],
+                'index_2006_03':[round(100*values[name][m]/values[name][base],3) for m in months],
                 'raw':[round(values[name][m],3) for m in months]}
 result={'updated_utc':datetime.now(timezone.utc).isoformat(timespec='seconds'),
         'latest_month':months[-1], 'base_month':base,'months':months,'series':series,
