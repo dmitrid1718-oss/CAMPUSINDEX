@@ -57,3 +57,5 @@ if prior.get('months')==months and all(prior.get('series',{}).get(k,{}).get('raw
 else:
   OUT.write_text(json.dumps(result,indent=2)+'\n')
   print('Updated matched monthly points:',len(months),'latest:',months[-1])
+
+# Historical source data is collected only from published agency observations.
